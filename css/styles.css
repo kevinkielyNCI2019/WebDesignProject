@@ -28,6 +28,17 @@ body {
 	color: #24abab;
 }
 
+.footer {
+	overflow: hidden;
+	background-color: #996633;	
+	text-align: center;
+	padding: 20px 20px;
+	
+}
+
+
+/* RESPONISVE DETAILS FROM HERE ONWARDS */
+
 @media screen and (max-width:992px) {
 	.topNav {
 		background-color: green;
