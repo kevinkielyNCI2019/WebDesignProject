@@ -3,36 +3,83 @@
 <head>
 	<title>KK Ceramics - County Limerick, IRELAND | Homepage</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
-
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
 
 <body>
 
-	<header>
-		<nav>
+	<div id="header">
+		<div id="nav">
 			<!-- <a class="active" href="index.html">Home</a> -->
-			<a href="about.html">About Us</a>
-			<a href="gallery.html">Gallery</a>
-			<div id="logo"><img src="images/logo.jpg" /></div>
-			<a href="classes.html">Pottery Classes</a>
-			<a href="contact.html">Contact Us</a>
+			<a class="textLink" href="about.html">About Us</a>
+			<a class="textLink" href="gallery.html">Gallery</a>
+			<div id="logo"><a href="index.html"><img src="images/logoBrown.png" /></a></div>
+			<a class="textLink" href="classes.html">Pottery Classes</a>
+			<a class="textLink" href="contact.html">Contact Us</a>
 		
-		</nav>
+		</div>
 		
-	</header>
+	</div>
+	
 
-<h1>KK Ceramics</h1>
+	
+<div id="contentWrapper">
+
+<div id="bannerScroller">
+
+<div class="slideshow-content slideshow-display-container">
+  <img class="mySlides" src="images/slides/01.jpg" style="width:100%">
+  <img class="mySlides" src="images/slides/02b.jpg" style="width:100%">
+  <img class="mySlides" src="images/slides/03.jpg" style="width:100%">
+  <img class="mySlides" src="images/slides/04.jpg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
 
 
-Content coming soon....
 
-<div class="footer">
+</div>	
+	
+	<div id="mainContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id interdum libero, sit amet elementum velit. Morbi non tempus velit. Nulla sit amet viverra orci. Fusce aliquet nisl non est congue congue. Donec sed eros bibendum, lobortis orci sit amet, blandit ipsum. Sed tortor nisi, convallis et arcu at, semper dignissim urna. Aenean sit amet cursus ligula. Proin lorem metus, porttitor id tristique id, tristique vitae dolor. Mauris posuere efficitur sem, sed dignissim lacus commodo vel. Proin dapibus suscipit nisl at condimentum. Ut euismod congue augue a rhoncus. Integer iaculis congue quam, id fermentum purus interdum faucibus. Pellentesque fringilla nunc eget libero eleifend, malesuada feugiat erat sollicitudin.
+
+Praesent tortor purus, laoreet sit amet justo semper, condimentum cursus ex. Vivamus hendrerit lorem in magna maximus, id iaculis turpis finibus. Nam tempor rhoncus tempus. Integer dapibus dapibus semper. Nunc dignissim dui eget lacinia convallis. Proin vel blandit diam, eu bibendum lorem. Aenean posuere faucibus libero, id dictum tortor pretium vitae. Fusce eu justo non turpis pharetra condimentum. Proin augue risus, viverra congue bibendum efficitur, faucibus sed enim. Proin feugiat arcu in mi vehicula ornare. Nulla sit amet posuere justo. Pellentesque eleifend est in ante egestas, pretium ultrices dolor interdum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin ac magna a nulla faucibus interdum. Maecenas luctus nisl dolor, nec tincidunt ipsum egestas vel.</div>
+	<div id="sidebar">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id interdum libero, sit amet elementum velit. Morbi non tempus velit. Nulla sit amet viverra orci. Fusce aliquet nisl non est congue congue. Donec sed eros bibendum, lobortis orci sit amet, blandit ipsum. Sed tortor nisi, convallis et arcu at, semper dignissim urna. Aenean sit amet cursus ligula. Proin lorem metus, porttitor id tristique id, tristique vitae dolor. Mauris posuere efficitur sem, sed dignissim lacus commodo vel. Proin dapibus suscipit nisl at condimentum. Ut euismod congue augue a rhoncus. Integer iaculis congue quam, id fermentum purus interdum faucibus. Pellentesque fringilla nunc eget libero eleifend, malesuada feugiat erat sollicitudin.
+
+Praesent tortor purus, laoreet sit amet justo semper, condimentum cursus ex. Vivamus hendrerit lorem in magna maximus, id iaculis turpis finibus. Nam tempor rhoncus tempus. Integer dapibus dapibus semper. Nunc dignissim dui eget lacinia convallis. Proin vel blandit diam, eu bibendum lorem. Aenean posuere faucibus libero, id dictum tortor pretium vitae. Fusce eu justo non turpis pharetra condimentum. Proin augue risus, viverra congue bibendum efficitur, faucibus sed enim. Proin feugiat arcu in mi vehicula ornare. Nulla sit amet posuere justo. Pellentesque eleifend est in ante egestas, pretium ultrices dolor interdum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin ac magna a nulla faucibus interdum. Maecenas luctus nisl dolor, nec tincidunt ipsum egestas vel.</div>
+
+	
+</div>
+
+<div class="clearfix"></div>
+
+<div id="footer">
 
 	<p>Footer information to go here later...</p>
 
 </div>
 
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
 
 </body>
 
