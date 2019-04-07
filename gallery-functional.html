@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>KK Ceramics - County Limerick, IRELAND | About Us</title>
+	<title>KK Ceramics - County Limerick, IRELAND | Photo Gallery</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='dist/simplelightbox.min.css' rel='stylesheet' type='text/css'>
+	<link href='css/demo.css' rel='stylesheet' type='text/css'>
 
 </head>
 
@@ -70,40 +72,26 @@
 	<p>Click on the thumbnail images and a large version of the image will appear.</p>
 
 	
-	<table id="classes" style="margin-top: 45px;">
-		  <tr>
-			<th>Class</th>
-			<th>Dates</th>
-			<th>Price</th>
-		  </tr>
-		  <tr>
-			<td>Weekly Wheel Throwing</td>
-			<td>10 Weeks (Starting May 1st)</td>
-			<td>€250</td>
-		  </tr>
-		  <tr>
-			<td>One Day Intro to Pottery</td>
-			<td>April 30th</td>
-			<td>€45</td>
-		  </tr>
-		  <tr>
-			<td>Raku Workshop</td>
-			<td>5 weeks (Starting April 25th)</td>
-			<td>€150</td>
-		  </tr>
-		  <tr>
-			<td>Hand Building & Scultpure (Intro)</td>
-			<td>May 11th</td>
-			<td>€50</td>
-		  </tr>
-  
-  </table>
+	<!-- Image gallery code goes here -->
+	
+	<div class="gallery">
+			<a href="images/gallery/functional/01.jpeg"><img src="images/gallery/functional/thumbs/01.jpg" alt="" title="Functional pottery ware" /></a>
+			<a href="images/gallery/functional/02.jpg"><img src="images/gallery/functional/thumbs/02.jpg" alt="" title="Functional pottery ware" /></a>
+			<a href="images/gallery/functional/03.jpg"><img src="images/gallery/functional/thumbs/03.jpg" alt="" title="Functional pottery ware" /></a>
+			<a href="images/gallery/functional/04.jpg"><img src="images/gallery/functional/thumbs/04.jpg" alt="" title="Functional pottery ware" /></a>
+			<div class="clear"></div>
+
+			<a href="images/gallery/functional/05.jpg"><img src="images/gallery/functional/thumbs/05.jpg" alt="" title="Functional pottery ware" /></a>
+			<a href="images/gallery/functional/06.jpg"><img src="images/gallery/functional/thumbs/06.jpg" alt="" title="Functional pottery ware" /></a>
+			<a href="images/gallery/functional/07.jpg"><img src="images/gallery/functional/thumbs/07.jpg" alt="" title="Functional pottery ware" /></a>
+			<a href="images/gallery/functional/08.jpg"><img src="images/gallery/functional/thumbs/08.jpg" alt="" title="Functional pottery ware" /></a>
+			<div class="clear"></div>
+
+		</div>
+	
   </div>
   
-  
-
-  
-
+ 
 	
 	
 	<div id="sidebar">
@@ -146,14 +134,12 @@
 	<div id="footerContainer">
 	
 		<div id="footerLeftCol">
-			<div id="footerCopyright">
-					<p>&copy; KK Ceramics 2019</p>
-
-			</div>
+			
 		
 		</div>
 		
 		<div id="footerRightCol">
+		<p>&copy; KK Ceramics 2019</p>
 		<strong>Contact Details:</strong><br/>
 		KK Ceramics<br/>
 		Lisamote,<br/>
@@ -172,6 +158,56 @@
 
 
 </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="dist/simple-lightbox.js"></script>
+<script>
+	$(function(){
+		var $gallery = $('.gallery a').simpleLightbox();
+
+		$gallery.on('show.simplelightbox', function(){
+			console.log('Requested for showing');
+		})
+		.on('shown.simplelightbox', function(){
+			console.log('Shown');
+		})
+		.on('close.simplelightbox', function(){
+			console.log('Requested for closing');
+		})
+		.on('closed.simplelightbox', function(){
+			console.log('Closed');
+		})
+		.on('change.simplelightbox', function(){
+			console.log('Requested for change');
+		})
+		.on('next.simplelightbox', function(){
+			console.log('Requested for next');
+		})
+		.on('prev.simplelightbox', function(){
+			console.log('Requested for prev');
+		})
+		.on('nextImageLoaded.simplelightbox', function(){
+			console.log('Next image loaded');
+		})
+		.on('prevImageLoaded.simplelightbox', function(){
+			console.log('Prev image loaded');
+		})
+		.on('changed.simplelightbox', function(){
+			console.log('Image changed');
+		})
+		.on('nextDone.simplelightbox', function(){
+			console.log('Image changed to next');
+		})
+		.on('prevDone.simplelightbox', function(){
+			console.log('Image changed to prev');
+		})
+		.on('error.simplelightbox', function(e){
+			console.log('No image found, go to the next/prev');
+			console.log(e);
+		});
+	});
+</script>
 
 <script>
 

@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>KK Ceramics - County Limerick, IRELAND | Pottery Classes</title>
+	<title>KK Ceramics - County Limerick, IRELAND | Photo Gallery</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='dist/simplelightbox.min.css' rel='stylesheet' type='text/css'>
+	<link href='css/demo.css' rel='stylesheet' type='text/css'>
+	<script src="js/SecondGallery.js"></script>
 
 </head>
 
-<body>
+<body onLoad="photoA()">
 
 	<div id="header">
 		<div id="nav">
@@ -63,51 +66,24 @@
 	
 	<div id="mainContent">
 	
-		<h1>Pottery Classes</h1>
+		<h1>Image Gallery: Specialised One-Off Pieces</h1>
 		
-		<p>KK Ceramics Pottery and Arts Centre provides arts and crafts courses for adults and children, specialising in pottery/ceramics, 
-		glass fusing, jewellery-making, and mosaic-making. We run weekly classes, weekend breaks, summer schools and summer camps, and 
-		tailor-made workshops for corporate groups and private parties. </p>
+		<p>The following is a gallery of our specialised one-off pottery work, bespoke custom designed items:</p>
 	
-	<p>Have a look at our course details below and <a href="contact.html">contact us</a> if you have any interest in taking a course, or have an queries.</p>
+	<p>Click on the arrows below to slide through the images.</p>
 
-	<div style="overflow-x:auto;">
-	<table id="classes" style="margin-top: 45px;">
-		  <tr>
-			<th>Class</th>
-			<th>Dates</th>
-			<th>Price</th>
-		  </tr>
-		  <tr>
-			<td>Weekly Wheel Throwing</td>
-			<td>10 Weeks (Starting May 1st)</td>
-			<td>€250</td>
-		  </tr>
-		  <tr>
-			<td>One Day Intro to Pottery</td>
-			<td>April 30th</td>
-			<td>€45</td>
-		  </tr>
-		  <tr>
-			<td>Raku Workshop</td>
-			<td>5 weeks (Starting April 25th)</td>
-			<td>€150</td>
-		  </tr>
-		  <tr>
-			<td>Hand Building & Scultpure (Intro)</td>
-			<td>May 11th</td>
-			<td>€50</td>
-		  </tr>
-  
-  </table>
+	
+	<!-- Image gallery code goes here -->
+	<div id = "galleryHolder">
+	<img src="images/secondgallery/img1.jpg" id="image" >
+    <div class="left_hold"><img onClick="photo(-1)" class="left" src="images/secondgallery/arrow_left.png"></div>
+    <div class="right_hold"><img onClick="photo(1)" class="right" src="images/secondgallery/arrow_right.png"></div>
+	
+	</div>
+	<div class="clearfix"></div>
   </div>
   
-  
-
-  <br/><br/>
-  <img src="images/pagecontent/classes.jpg" alt="Home page image for KK Ceramics" title="About page image for KK Ceramics" class="imagesfloatleft" />
-	<p>You can also get in touch if you require any specialised one-to-one classes or advice on any ceramics projects.</p>
-	</div>
+ 
 	
 	
 	<div id="sidebar">
@@ -176,6 +152,55 @@
 </div>
 
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="dist/simple-lightbox.js"></script>
+<script>
+	$(function(){
+		var $gallery = $('.gallery a').simpleLightbox();
+
+		$gallery.on('show.simplelightbox', function(){
+			console.log('Requested for showing');
+		})
+		.on('shown.simplelightbox', function(){
+			console.log('Shown');
+		})
+		.on('close.simplelightbox', function(){
+			console.log('Requested for closing');
+		})
+		.on('closed.simplelightbox', function(){
+			console.log('Closed');
+		})
+		.on('change.simplelightbox', function(){
+			console.log('Requested for change');
+		})
+		.on('next.simplelightbox', function(){
+			console.log('Requested for next');
+		})
+		.on('prev.simplelightbox', function(){
+			console.log('Requested for prev');
+		})
+		.on('nextImageLoaded.simplelightbox', function(){
+			console.log('Next image loaded');
+		})
+		.on('prevImageLoaded.simplelightbox', function(){
+			console.log('Prev image loaded');
+		})
+		.on('changed.simplelightbox', function(){
+			console.log('Image changed');
+		})
+		.on('nextDone.simplelightbox', function(){
+			console.log('Image changed to next');
+		})
+		.on('prevDone.simplelightbox', function(){
+			console.log('Image changed to prev');
+		})
+		.on('error.simplelightbox', function(e){
+			console.log('No image found, go to the next/prev');
+			console.log(e);
+		});
+	});
+</script>
+
 <script>
 
 <!-- Slideshow script here -->
@@ -211,6 +236,7 @@ function myFunction() {
   }
 }
 </script>
+
 
 </body>
 
