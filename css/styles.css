@@ -339,27 +339,31 @@ a.icon {
   color: white;
 }
 
+#myForm {
+	width: 400px;
+	background-color:red;
+}
+
 /* Image gallery CSS */
 
 
-/* line 8, ../sass/demo.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 12, ../sass/demo.scss */
+
 a {
   color: #4ab19a;
 }
 
-/* line 16, ../sass/demo.scss */
+
 .clear {
   clear: both;
   float: none;
   width: 100%;
 }
 
-/* line 22, ../sass/demo.scss */
+
 .container {
   max-width: 1170px;
   width: 100%;
@@ -368,7 +372,7 @@ a {
   margin-right: auto;
   margin-left: auto;
 }
-/* line 32, ../sass/demo.scss */
+
 .container .gallery a img {
   float: left;
   width: 20%;
@@ -381,7 +385,7 @@ a {
   transition: transform .15s ease;
   position: relative;
 }
-/* line 46, ../sass/demo.scss */
+
 .container .gallery a:hover img {
   -webkit-transform: scale(1.05);
   -moz-transform: scale(1.05);
@@ -390,12 +394,12 @@ a {
   transform: scale(1.05);
   z-index: 5;
 }
-/* line 57, ../sass/demo.scss */
+
 .container .gallery a.big img {
   width: 40%;
 }
 
-/* line 65, ../sass/demo.scss */
+
 .align-center {
   text-align: center;
 }

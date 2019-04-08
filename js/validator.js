@@ -13,7 +13,7 @@ function myValidator(){
 	
 	{
 		console.log("testing1");
-		window.alert("We will get back to you shortly");
+		window.alert("Thanks for your submission. We will get back to you shortly");
 		
 		
 	}
@@ -26,17 +26,17 @@ function myValidator(){
 	
 	else if(emailAdd===""){
 		console.log("testing3");
-				window.alert("You did not enter emailAdd correctly");
+				window.alert("You did not enter email address correctly");
 
 	}
 	
 	else if(msg===""){
 		console.log("testing4");
-				window.alert("You did not enter password correctly");
+				window.alert("You did not enter your message correctly");
 
 	}
 	
 	else {
-		window.alert("Errors please try again!");
+		window.alert("Errors in your submission - please try again!");
 	}
 }
